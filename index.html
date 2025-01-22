@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תפריט ארוחות</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f3ef;
+            margin: 0;
+            padding: 0;
+        }
+/*  */
+        .header {
+            background: linear-gradient(135deg, #8B7355 0%, #A0522D 100%);
+            color: #f5f3ef;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-container {
+            max-width: 250px;
+            margin: 0 auto;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            color: #f5f3ef;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+            background-color: #f9f6f2;
+            border-radius: 8px;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #8B7355;
+            color: #f5f3ef;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+            text-decoration: none;
+        }
+
+        .nav-button:hover {
+            background-color: #A0522D;
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #8B7355;
+            border-bottom: 2px solid #8B7355;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #A0522D;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            padding: 8px 0;
+            border-bottom: 1px solid #e6e0d8;
+            transition: background-color 0.2s ease;
+        }
+
+        li:hover {
+            background-color: #f9f6f2;
+            padding-right: 10px;
+        }
+
+        .recommended {
+            margin: 20px 0;
+            padding: 15px;
+            background: linear-gradient(to right, #f9f6f2, #f5f3ef);
+            border-right: 4px solid #8B7355;
+            border-radius: 5px;
+        }
+
+        .recommended strong {
+            color: #8B7355;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #8B7355 0%, #A0522D 100%);
+            color: #f5f3ef;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 1.1em;
+        }
+
+        .meal-section {
+            scroll-margin-top: 100px;
+        }
+   .client-name {
+            text-align: center;
+            background-color: #f9f6f2;
+            padding: 15px;
+            margin: -20px auto 20px;
+            max-width: 800px;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .client-name h2 {
+            color: #8B7355;
+            margin: 0;
+            font-size: 1.5em;
+            border: none;
+            padding: 0;
+        }
+
+        .client-name span {
+            color: #A0522D;
+            font-weight: bold;
+        }
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .nav-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-button {
+                text-align: center;
+
+            }
+              .client-name {
+                margin: -10px 10px 20px;
+            }
+            .client-name h2 {
+                font-size: 1.3em;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <img src="logo.png" alt="לוגו">
+        </div>
+        <h1>תפריט ארוחות</h1>
+    </div>
+<div class="client-name">
+    <h2>התפריט עבור: <span> יזן סועד</span></h2>
+</div>
+    <div class="nav-buttons">
+        <button class="nav-button" onclick="document.getElementById('meal1').scrollIntoView({behavior: 'smooth'})">ארוחה
+            ראשונה</button>
+        <button class="nav-button" onclick="document.getElementById('snack').scrollIntoView({behavior: 'smooth'})">ארוחת
+            ביניים</button>
+        <button class="nav-button" onclick="document.getElementById('meal2').scrollIntoView({behavior: 'smooth'})">ארוחה
+            שנייה</button>
+        <a href="nutrition.html" class="nav-button">ערכים תזונתיים</a>
+    </div>
+    <div class="container">
+        <div id="meal1" class="meal-section">
+            <h2>ארוחה ראשונה</h2>
+            <h3>חלבון – לבחור אופציה אחת (לאחר הבישול):</h3>
+            <ul>
+                <li>230 גרם חזה עוף / פסטרמה 5% / פילה עוף / כבד עוף</li>
+                <li>6 ביצים קשות (חצי מהן עם הצהוב)</li>
+                <li>300 גרם גבינה בולגרית 5%</li>
+                <li>160 גרם גבינה בולגרית 9%</li>
+                <li>340 גרם טונה (משימורים במים)</li>
+                <li>200 גרם פילה עגל / המבורגר (כבב / סינטה / אנטריקוט)</li>
+            </ul>
+
+            <h3>פחמימה – לבחור אופציה אחת (לאחר הבישול):</h3>
+            <ul>
+                <li>200 גרם אורז לבן</li>
+                <li>210 גרם קוסקוס</li>
+                <li>160 גרם פסטה</li>
+                <li>270 גרם תפוח אדמה</li>
+                <li>5 פרוסות לחם קל (עד 50 קלוריות ליחידה)</li>
+                <li>100 גרם טורטייה לבנונית (שניים קטנות או אחת גדולה)</li>
+                <li>פיתה לבנה (פיתה אחת)</li>
+                <li>260 גרם בטטה</li>
+                <li>70 גרם שיבולת שועל</li>
+                <li>90 גרם לחמנייה לבנה (לחמנייה אחת)</li>
+            </ul>
+
+            <div class="recommended">
+                <strong>תוספת מומלצת:</strong>
+                <p>סלט ירקות 180 גרם (מומלץ להוסיף ירקות ירוקים).</p>
+            </div>
+        </div>
+
+        <div id="snack" class="meal-section">
+            <h2>ארוחת ביניים</h2>
+            <h3>אופציות:</h3>
+            <ul>
+                <li>4 פרוסות לחם קל (עד 50 קלוריות ליחידה) / 6 פריכיות אורז עם:</li>
+                <ul>
+                    <li>100 גרם פסטרמה דלת שומן</li>
+                    <li>90 גרם כתף בקר</li>
+                    <li>4 חלבוני ביצה (לבן בלבד)</li>
+                    <li>80 גרם גבינה 5%</li>
+                    <li>120 גרם קוטג' 5% / גבינה לבנה 5% / לבנה 5%</li>
+                    <li>100 גרם טונה במים</li>
+                </ul>
+                <li>שייק חלבון:</li>
+                <ul>
+                    <li>200 מ"ל מים + כפית חלבון WHEY</li>
+                    <li>1 קופסה PRO/GO (עד 150 קלוריות)</li>
+                    <li>חטיף חלבון (עד 350 קלוריות)</li>
+                </ul>
+            </ul>
+        </div>
+
+        <div id="meal2" class="meal-section">
+            <h2>ארוחה שנייה</h2>
+            <h3>חלבון – לבחור אופציה אחת (לאחר הבישול):</h3>
+            <ul>
+                <li>230 גרם חזה עוף / פסטרמה 5% / פילה עוף / כבד עוף</li>
+                <li>6 ביצים קשות (חצי מהן עם הצהוב)</li>
+                <li>300 גרם גבינה בולגרית 5%</li>
+                <li>160 גרם גבינה בולגרית 9%</li>
+                <li>340 גרם טונה (משימורים במים)</li>
+                <li>200 גרם פילה עגל / המבורגר (כבב / סינטה / אנטריקוט)</li>
+            </ul>
+
+            <h3>פחמימה – לבחור אופציה אחת (לאחר הבישול):</h3>
+            <ul>
+                <li>200 גרם אורז לבן</li>
+                <li>210 גרם קוסקוס</li>
+                <li>160 גרם פסטה</li>
+                <li>270 גרם תפוח אדמה</li>
+                <li>5 פרוסות לחם קל (עד 50 קלוריות ליחידה)</li>
+                <li>100 גרם טורטייה לבנונית (שניים קטנות או אחת גדולה)</li>
+                <li>פיתה לבנה (פיתה אחת)</li>
+                <li>260 גרם בטטה</li>
+                <li>70 גרם שיבולת שועל</li>
+                <li>90 גרם לחמנייה לבנה (לחמנייה אחת)</li>
+            </ul>
+
+            <div class="recommended">
+                <strong>תוספת מומלצת:</strong>
+                <p>סלט ירקות 180 גרם (מומלץ להוסיף ירקות ירוקים).</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>נבנה על ידי שרבל עילבוני</p>
+    </footer>
+</body>
+
+</html>
